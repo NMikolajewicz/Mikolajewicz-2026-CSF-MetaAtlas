@@ -1,0 +1,20 @@
+cff-version: 1.2.0
+message: "If you use this repository, please cite the archived software release and the associated article."
+title: "CSF proteomic meta-atlas: processed analysis data and R scripts"
+abstract: >-
+  Processed protein-, pathway-, model- and study-level data with R scripts
+  used to reproduce the main analyses of the human CSF proteomic meta-atlas.
+type: software
+authors:
+  - family-names: Mikolajewicz
+    given-names: Nicholas
+repository-code: "https://github.com/NMikolajewicz/Mikolajewicz-2026-CSF-MetaAtlas"
+url: "https://github.com/NMikolajewicz/Mikolajewicz-2026-CSF-MetaAtlas"
+license: MIT
+version: 1.0.0
+date-released: 2026-07-18
+keywords:
+  - cerebrospinal fluid
+  - proteomics
+  - meta-analysis
+  - reproducible research

@@ -15,18 +15,38 @@ data/       Processed input tables used by the numbered scripts
 scripts/    R scripts for analyses 01–09
 analysis/   R Markdown analysis files; generated tables and figures are written here
 README.md   Analysis description and instructions
+CITATION.cff  Citation metadata for archived releases
 ```
 
 All paths are relative to the repository root. The R scripts use base R only;
 no package installation or workflow software is required.
 
+## Software environment
+
+The primary analysis requires only base R. Release 1.0.0 was tested from a
+clean clone with R 4.5.2 on macOS 15.6.1 (arm64) and was also checked with R
+4.6.1. The complete run does not install packages or access the network.
+
+The optional HTML rendering step was tested with `rmarkdown` 2.30, `knitr`
+1.51 and Pandoc 3.6.3. These packages are not used by the numbered R scripts.
+
 ## Running the analyses
 
-The analyses were run with R 4.5.2. From the repository root, run the complete
-set with:
+To reproduce the archived release, clone the tagged source and run the complete
+set from the repository root:
 
 ```sh
+git clone --branch v1.0.0 --depth 1 https://github.com/NMikolajewicz/Mikolajewicz-2026-CSF-MetaAtlas.git
+cd Mikolajewicz-2026-CSF-MetaAtlas
 Rscript scripts/run_all.R
+```
+
+The final command runs analyses 01–09 and checks the principal published
+values. A successful run ends with `All analyses completed and verified.` The
+verification can also be repeated separately with:
+
+```sh
+Rscript scripts/verify_results.R
 ```
 
 The scripts can also be run individually:
@@ -49,11 +69,11 @@ complete processed-data analysis normally finishes in a few minutes on a
 standard laptop.
 
 The R Markdown files provide short, executable descriptions of each analysis.
-They can be rendered with `rmarkdown` if an HTML record is wanted:
+With the optional rendering software listed above, all nine can be rendered
+with:
 
 ```sh
-Rscript -e 'install.packages("rmarkdown")'
-Rscript -e 'rmarkdown::render("analysis/01_matrix_correction.Rmd")'
+Rscript -e 'for (f in list.files("analysis", pattern = "[.]Rmd$", full.names = TRUE)) rmarkdown::render(f, quiet = TRUE)'
 ```
 
 ## Analyses and manuscript figures

@@ -28,4 +28,10 @@ for (script in scripts) {
   )
 }
 
-message("\nAll analyses completed.")
+message("\nVerifying headline results")
+sys.source(
+  file.path(root, "scripts", "verify_results.R"),
+  envir = new.env(parent = globalenv())
+)
+
+message("\nAll analyses completed and verified.")
