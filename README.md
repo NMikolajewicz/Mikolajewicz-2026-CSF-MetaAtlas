@@ -8,12 +8,6 @@ mass-spectrometry-accessible core CSF proteome, identifies 13 recurrent
 proteomic meta-programs, and evaluates C5 and NRCAM as a two-protein estimate
 of a shared injury–homeostasis axis.
 
-The repository covers Figure 2, Figure 3, Figure 4a–f and Figure 4m–o, together
-with the directly related Extended Data panels. It is deliberately small: the
-analyses begin with processed protein-, pathway-, model- and study-level tables.
-Raw mass-spectrometry files, participant-level abundance matrices and clinical
-records are not included.
-
 ## Repository contents
 
 ```text
