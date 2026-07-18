@@ -1,0 +1,22 @@
+---
+title: "Core CSF proteome"
+output: html_document
+---
+
+The input table contains the protein-level random-effects detection estimates,
+confidence intervals, heterogeneity statistics and leave-one-study-out results.
+The analysis reproduces the five recurrence tiers and extracts the Tier A+B
+core proteome used in subsequent analyses.
+
+```{r setup, include=FALSE}
+repo <- if (dir.exists("../scripts")) normalizePath("..") else normalizePath(".")
+knitr::opts_knit$set(root.dir = repo)
+source(file.path(repo, "scripts", "03_core_proteome.R"))
+```
+
+```{r results}
+read.delim("analysis/03_core_proteome/core_tier_counts.tsv", check.names = FALSE)
+```
+
+The protein list and figure are written to
+`analysis/03_core_proteome/`.

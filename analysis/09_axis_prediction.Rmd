@@ -1,0 +1,22 @@
+---
+title: "C5 and NRCAM axis prediction"
+output: html_document
+---
+
+The prediction analyses used separate estimands for the Bader, Riviere-Cazaux
+and all-study datasets. The included aggregate tables preserve those distinctions.
+The script reproduces the model ladders and study forest plot and repeats the
+random-effects pooling of the 35 study-level C5+NRCAM models. Participant-level
+clinical and proteomic records are not distributed in this repository.
+
+```{r setup, include=FALSE}
+repo <- if (dir.exists("../scripts")) normalizePath("..") else normalizePath(".")
+knitr::opts_knit$set(root.dir = repo)
+source(file.path(repo, "scripts", "09_axis_prediction.R"))
+```
+
+```{r results}
+read.delim("analysis/09_axis_prediction/all_study_recomputed_meta_analysis.tsv", check.names = FALSE)
+```
+
+The figure is written to `analysis/09_axis_prediction/axis_prediction.pdf`.

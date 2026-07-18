@@ -1,0 +1,23 @@
+---
+title: "Protein-detection model"
+output: html_document
+---
+
+Cross-validated predictions from the source-specific elastic-net model are
+provided for the 2,762 proteins used in model evaluation. The script recalculates
+the correlation with observed detection, prediction error, and discrimination
+of the Tier A+B core proteome. Source-head coefficients are included as a
+separate input table.
+
+```{r setup, include=FALSE}
+repo <- if (dir.exists("../scripts")) normalizePath("..") else normalizePath(".")
+knitr::opts_knit$set(root.dir = repo)
+source(file.path(repo, "scripts", "04_detection_model.R"))
+```
+
+```{r results}
+read.delim("analysis/04_detection_model/detection_model_performance.tsv", check.names = FALSE)
+```
+
+The assessment figure is written to
+`analysis/04_detection_model/detection_model.pdf`.

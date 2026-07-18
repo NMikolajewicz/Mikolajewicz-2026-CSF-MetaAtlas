@@ -1,0 +1,23 @@
+---
+title: "Rolling local-support assayable universe"
+output: html_document
+---
+
+Proteins were considered locally assayable when they were supported by both
+peer studies in a centred three-study window. Proteins detected in the held-out
+study were retained so that the denominator did not exclude observed proteins.
+The script checks these rules at the protein-by-study level and summarizes the
+resulting assayable universe for each of the 21 derivation studies.
+
+```{r setup, include=FALSE}
+repo <- if (dir.exists("../scripts")) normalizePath("..") else normalizePath(".")
+knitr::opts_knit$set(root.dir = repo)
+source(file.path(repo, "scripts", "02_assayable_universe.R"))
+```
+
+```{r results}
+read.delim("analysis/02_assayable_universe/study_assayable_universes.tsv", check.names = FALSE)
+```
+
+The figure is written to
+`analysis/02_assayable_universe/assayable_universe.pdf`.

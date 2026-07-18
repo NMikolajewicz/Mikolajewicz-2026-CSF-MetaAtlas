@@ -1,0 +1,23 @@
+---
+title: "Gene-set enrichment"
+output: html_document
+---
+
+This analysis summarizes the Core Class and meta-program over-representation
+tests and the pre-ranked injury-homeostasis axis enrichment. Pathway statistics
+and adjusted P values are supplied as processed inputs because the underlying
+gene-set collections retain their original provider licences. The script applies
+the manuscript significance thresholds and regenerates the enrichment panels.
+
+```{r setup, include=FALSE}
+repo <- if (dir.exists("../scripts")) normalizePath("..") else normalizePath(".")
+knitr::opts_knit$set(root.dir = repo)
+source(file.path(repo, "scripts", "08_enrichment.R"))
+```
+
+```{r results}
+read.delim("analysis/08_enrichment/enrichment_summary.tsv", check.names = FALSE)
+```
+
+Significant pathways and the figure are written to
+`analysis/08_enrichment/`.

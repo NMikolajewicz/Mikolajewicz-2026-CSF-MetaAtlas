@@ -1,0 +1,23 @@
+---
+title: "Injury-homeostasis axis"
+output: html_document
+---
+
+The axis was defined from the shared covariance structure of 13 meta-program
+activities. The processed inputs contain the pooled meta-program correlation
+matrix, principal-component loadings, permutation result and protein-level
+axis associations. The analysis reproduces the clustered correlation map,
+axis orientation, and the injury- and homeostasis-associated protein sets.
+
+```{r setup, include=FALSE}
+repo <- if (dir.exists("../scripts")) normalizePath("..") else normalizePath(".")
+knitr::opts_knit$set(root.dir = repo)
+source(file.path(repo, "scripts", "07_injury_homeostasis_axis.R"))
+```
+
+```{r results}
+read.delim("analysis/07_injury_homeostasis_axis/axis_summary.tsv", check.names = FALSE)
+```
+
+The signature table and figure are written to
+`analysis/07_injury_homeostasis_axis/`.

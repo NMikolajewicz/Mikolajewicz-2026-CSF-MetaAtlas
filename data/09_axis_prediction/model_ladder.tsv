@@ -1,0 +1,19 @@
+panel_id	cohort_label	model_id	model_label	model_group	model_order	estimate	ci_lower	ci_upper	has_ci	n
+A	Astral train CV	routine_protein_wbc_rf	Protein + WBC	routine	1	0.418345464370301	0.380816112618102	0.455182300920542	TRUE	1628
+A	Astral train CV	routine_protein_wbc_qalb_rf	Protein + WBC + QAlb	qalb	2	0.527975336919877	0.494301492154302	0.560045965050228	TRUE	1627
+A	Astral train CV	targeted_c5_nrcam_rf	C5 + NRCAM alone	c5_nrcam	3	0.825115388854069	NA	NA	FALSE	2077
+A	Astral train CV	targeted_protein_wbc_c5_nrcam_rf	Protein + WBC + C5/NRCAM	c5_nrcam	4	0.843291587139197	NA	NA	FALSE	1628
+A	Astral train CV	barrier_targeted_protein_wbc_qalb_c5_nrcam_rf	Protein + WBC + QAlb + C5/NRCAM	combined	5	0.844201570044859	0.829593422322463	0.857804637657343	TRUE	1627
+A	timsTOF validation	routine_protein_wbc_rf	Protein + WBC	routine	1	0.429842836545032	0.410993121905279	0.4485562553455	TRUE	4957
+A	timsTOF validation	routine_protein_wbc_qalb_rf	Protein + WBC + QAlb	qalb	2	0.546623440051554	0.530153921459565	0.563161067332504	TRUE	4947
+A	timsTOF validation	targeted_c5_nrcam_rf	C5 + NRCAM alone	c5_nrcam	3	0.764336442124221	NA	NA	FALSE	7547
+A	timsTOF validation	targeted_protein_wbc_c5_nrcam_rf	Protein + WBC + C5/NRCAM	c5_nrcam	4	0.789165804754794	NA	NA	FALSE	4957
+A	timsTOF validation	barrier_targeted_protein_wbc_qalb_c5_nrcam_rf	Protein + WBC + QAlb + C5/NRCAM	combined	5	0.796390505906756	0.787249192428482	0.80521459875959	TRUE	4947
+B	Riviere-Cazaux all samples	c5_alone	C5 alone	c5	1	0.459656469589572	NA	NA	FALSE	97
+B	Riviere-Cazaux all samples	c5_plus_c5a	C5 + C5a	c5	2	0.471117494279469	NA	NA	FALSE	97
+B	Riviere-Cazaux all samples	c5_family	C5 family	c5	3	0.472195218259376	NA	NA	FALSE	97
+B	Riviere-Cazaux all samples	c5a_alone	C5a alone	c5	4	0.425973869322304	NA	NA	FALSE	97
+B	Riviere-Cazaux all samples	convertase_alone	Convertase alone	convertase	5	0.190521321585282	NA	NA	FALSE	97
+B	Riviere-Cazaux all samples	nrcam_alone	NRCAM alone	nrcam	6	0.632209838885738	NA	NA	FALSE	97
+B	Riviere-Cazaux all samples	c5_nrcam_only	C5 + NRCAM alone	c5_nrcam	7	0.868920293574867	NA	NA	FALSE	97
+B	Riviere-Cazaux all samples	c5_family_plus_nrcam	C5 family + NRCAM	combined	8	0.87285876111723	NA	NA	FALSE	97

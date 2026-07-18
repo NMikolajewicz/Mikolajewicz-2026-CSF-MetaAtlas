@@ -1,0 +1,23 @@
+---
+title: "Consensus proteomic meta-programs"
+output: html_document
+---
+
+Study-level NMF, ICA and shared-nearest-neighbour components were filtered for
+within-study stability, cross-study recurrence and redundancy before assembly
+into 13 meta-programs. The input tables contain the component audit trail,
+meta-program memberships and leave-one-study-out results. The script reproduces
+the filtering funnel, protein catalogue and transfer summaries. It does not
+repeat the participant-level matrix decompositions.
+
+```{r setup, include=FALSE}
+repo <- if (dir.exists("../scripts")) normalizePath("..") else normalizePath(".")
+knitr::opts_knit$set(root.dir = repo)
+source(file.path(repo, "scripts", "06_meta_programs.R"))
+```
+
+```{r results}
+read.delim("analysis/06_meta_programs/meta_program_summary.tsv", check.names = FALSE)
+```
+
+Panel-ready outputs are written to `analysis/06_meta_programs/`.

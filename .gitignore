@@ -1,0 +1,5 @@
+.DS_Store
+analysis/*/
+analysis/*.html
+analysis/*_files/
+Rplots.pdf

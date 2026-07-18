@@ -1,0 +1,5 @@
+stage	n_programs	pct_of_initial	pct_of_previous
+all_candidates	28795	100	100
+within_robust	22271	77.3	77.3
+between_robust	10805	37.5	48.5
+nonredundant	634	2.2	5.9

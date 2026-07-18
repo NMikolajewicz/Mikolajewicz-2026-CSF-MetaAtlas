@@ -1,0 +1,22 @@
+---
+title: "Matrix correction benchmark"
+output: html_document
+---
+
+The benchmark compared ten matrix states using three batch-removal metrics and
+six measures of biological preservation. The overall score gives 40% weight to
+batch correction and 60% to biological preservation. This analysis recomputes
+the composite scores and method ranking from the supplied metric table.
+
+```{r setup, include=FALSE}
+repo <- if (dir.exists("../scripts")) normalizePath("..") else normalizePath(".")
+knitr::opts_knit$set(root.dir = repo)
+source(file.path(repo, "scripts", "01_matrix_correction.R"))
+```
+
+```{r results}
+read.delim("analysis/01_matrix_correction/correction_method_scores.tsv", check.names = FALSE)
+```
+
+The panel-ready figure is written to
+`analysis/01_matrix_correction/correction_benchmark.pdf`.

@@ -1,0 +1,23 @@
+---
+title: "Core protein classes"
+output: html_document
+---
+
+The 747 core proteins were grouped into six classes using mixed protein
+annotations and consensus clustering. The supplied class assignments are the
+labels used in the manuscript. This analysis reconstructs the Gower-distance
+ordination, class sizes and class-level feature profiles from the 40 retained
+features.
+
+```{r setup, include=FALSE}
+repo <- if (dir.exists("../scripts")) normalizePath("..") else normalizePath(".")
+knitr::opts_knit$set(root.dir = repo)
+source(file.path(repo, "scripts", "05_core_classes.R"))
+```
+
+```{r results}
+read.delim("analysis/05_core_classes/core_class_counts.tsv", check.names = FALSE)
+```
+
+The ordination coordinates and figure are written to
+`analysis/05_core_classes/`.
