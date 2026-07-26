@@ -27,8 +27,8 @@ The primary analysis requires only base R. Release 1.0.0 was tested from a
 clean clone with R 4.5.2 on macOS 15.6.1 (arm64) and was also checked with R
 4.6.1. The complete run does not install packages or access the network.
 
-The optional HTML rendering step was tested with `rmarkdown` 2.30, `knitr`
-1.51 and Pandoc 3.6.3. These packages are not used by the numbered R scripts.
+The optional HTML rendering step was tested with `rmarkdown` 2.31, `knitr`
+1.51 and Pandoc 3.8.3. These packages are not used by the numbered R scripts.
 
 ## Running the analyses
 

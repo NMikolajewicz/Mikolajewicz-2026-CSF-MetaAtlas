@@ -12,7 +12,7 @@ repository-code: "https://github.com/NMikolajewicz/Mikolajewicz-2026-CSF-MetaAtl
 url: "https://github.com/NMikolajewicz/Mikolajewicz-2026-CSF-MetaAtlas"
 license: MIT
 version: 1.0.0
-date-released: 2026-07-18
+date-released: 2026-07-26
 keywords:
   - cerebrospinal fluid
   - proteomics
