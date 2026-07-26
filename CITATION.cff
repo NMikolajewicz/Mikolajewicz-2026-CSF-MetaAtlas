@@ -9,7 +9,9 @@ authors:
   - family-names: Mikolajewicz
     given-names: Nicholas
 repository-code: "https://github.com/NMikolajewicz/Mikolajewicz-2026-CSF-MetaAtlas"
+repository-artifact: "https://doi.org/10.5281/zenodo.21608891"
 url: "https://github.com/NMikolajewicz/Mikolajewicz-2026-CSF-MetaAtlas"
+doi: 10.5281/zenodo.21608891
 license: MIT
 version: 1.0.0
 date-released: 2026-07-26

@@ -1,5 +1,7 @@
 # CSF proteomic meta-atlas
 
+[![DOI](https://zenodo.org/badge/DOI/10.5281/zenodo.21608891.svg)](https://doi.org/10.5281/zenodo.21608891)
+
 This repository contains the processed data and R code used to reproduce the
 main analyses reported in **“A shared injury–homeostasis gradient in the human
 CSF proteome across neurological disease.”** The study combines 35
@@ -138,13 +140,17 @@ The main checks reproduced by `scripts/run_all.R` include:
 
 ## Citation and contact
 
+The archived software release is available at
+[https://doi.org/10.5281/zenodo.21608891](https://doi.org/10.5281/zenodo.21608891).
+
 Nicholas Mikolajewicz, Cecile Riviere-Cazaux, Kyle Tuohy, Sruthi Ranganathan,
 Rahul Kumar, Alexandra M. Miller, Manmeet S. Ahluwalia, Paul C. Boutros,
 Chetan Bettegowda, Terry Burns, Thomas Kislinger and Alireza Mansouri. **A
 shared injury–homeostasis gradient in the human CSF proteome across neurological
 disease.** 2026.
 
-Please update the citation with the journal reference and DOI after publication.
+Please update the article citation with the journal reference and article DOI
+after publication.
 Questions about the analysis may be directed to Nicholas Mikolajewicz. Study
 correspondence: Alireza Mansouri (`amansouri@pennstatehealth.psu.edu`).
 
